@@ -1,0 +1,14 @@
+* C:\Users\ketak\OneDrive\Documents\LTspice\New folder\Differntial Amplifier using 2K.asc
+XU1 N005 N001 N003 N007 N002 AD712
+V1 N003 0 10
+V2 0 N007 10
+R§2k N001 N004 2k tol=1 pwr=.25
+R3 N005 N006 2k tol=1 pwr=.25
+R4 N002 N001 2k tol=1 pwr=.25
+R2 N005 0 2k tol=1 pwr=.25
+V§4v N004 0 SINE(0 5 100)
+V4 N006 0 SINE(0 2 100) AC 2 wt
+.tran .1
+.lib ADI1.lib
+.backanno
+.end
